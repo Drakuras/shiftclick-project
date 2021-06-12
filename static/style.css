@@ -1,31 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: black;
+    background: linear-gradient(141deg, #000000 0%, #634545 51%, #3e423e 75%);
     color: white;
+    font-size: large;
 }
 .container1{
-    text-align: center;
+    
     margin: 20px;
+    text-align: center;
+    
+    
+}
+h1{
+    color: rgb(255, 255, 255);
+}
+.container1, p {
+    margin-left: 100px;
+    margin-right: 100px;
+ 
 }
 #slideshow{
-
+    
     width: 100%;
    text-align: center;
     
 }
 #slideshow img{
     width: 60%;
-    height: 500px;
+    height: 60%;
     margin: 10px;
-    display: none;
-
+    object-fit: cover;
   
 
-
-    object-fit: cover;
+}
+#carousel-btn{
+    display: flex;
+    height: 100px;
+    justify-content: space-evenly;
+    padding: 20px;
+   
+    
+}
+#carousel-btn button{
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: transparent;
+    font-size: large;
+}
+#carousel-btn button:hover{
+    color: rgb(0, 0, 0);
+    background: linear-gradient(141deg, #616161 0%, #414141 51%, #363636 75%);
+    
+    
 }
 #links{
     text-align: center;
     margin: 30px;
+
+    
 }
+#links a img{
+    padding: 30px;
+    width: 60px;
+
+}
+#links a img:hover{
+    background-color: rgb(94, 94, 94);
+    border-radius: 100%;
+
+}
+@media (max-width: 600px){
+    body{
+        margin: 0px;
+    }
+    .container1{
+    
+        margin-left: 0px;
+        margin-right: 0px;
+        
+        
+    }
+    #slideshow img{
+        width: 95%;
+        height: 300px;
+        margin: 5px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+     
+    
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0); 
+  
+  
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1d1d1d; 
+  }
+@media (max-width: 1024px) {
+    .container1{
+    
+          
+        
+        
+        
+    }
+
+      #slideshow img{
+        width: 95%;
+        height: 300px;
+        margin: 5px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    
+}
+
