@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 body{
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(141deg, #000000 0%, #634545 51%, #3e423e 75%);
+    background: linear-gradient(141deg, #000000 0%, #742f2f 51%, #555555 75%);
     color: white;
     font-size: large;
 }
+
 .container1{
     
     margin: 20px;
@@ -27,6 +28,8 @@ h1{
     
 }
 #slideshow img{
+    box-shadow: 0px 21px 30px -14px rgba(0,0,0,0.89);
+    border-radius: 3px;
     width: 60%;
     height: 60%;
     margin: 10px;
@@ -38,22 +41,44 @@ h1{
     height: 100px;
     justify-content: space-evenly;
     padding: 20px;
+    border: solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 30%;
+    border-width: 3px;
+    border-left: 30px;
+    border-right: 30px;
+    border-top: none;
+    margin: 50px;
+    
    
     
 }
 #carousel-btn button{
+    
+    
     color: rgb(0, 0, 0);
-    padding: 6px;
+    padding: 10px;
     width: 100px;
     height: 100px;
+    border: none;
     border-radius: 100%;
     background-color: transparent;
-    font-size: large;
+    font-size: x-large;
     
 }
 #carousel-btn button:hover{
-    color: white;
+    animation-name: btn-moves;
+    animation-duration: 0.3s;
+    color: rgb(255, 255, 255);
     box-shadow: 0px 0px 10px 1px ;
+}
+@keyframes btn-moves {
+    0%{
+    
+        color: rgb(138, 71, 71);
+        transform: scale(50%);
+    }
+    
 }
 #links{
     text-align: center;
@@ -62,16 +87,25 @@ h1{
     
 }
 #links a img{
-    padding: 30px;
-    width: 60px;
+    padding: 50px;
+    width: 70px;
 
 }
 #links a img:hover{
- 
+    width: 52px;
+    animation-name: logos;
+    animation-duration: 1s;
     border-radius: 100%;
-    box-shadow: 0px 0px 40px 1px ;
-    color: white;
+    color: rgb(255, 0, 0);
 
+}
+@keyframes logos {
+    0%{
+        transform: rotateX(360deg);
+        box-shadow: 0px 0px 40px 1px ;
+
+    }
+    
 }
 @media (max-width: 600px){
     body{
@@ -110,7 +144,7 @@ h1{
   
   
   }
-  
+
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #1d1d1d; 

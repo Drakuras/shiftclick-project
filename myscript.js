@@ -1,6 +1,7 @@
 const images = document.getElementById('slideshow').getElementsByTagName('img')
 const button = document.getElementById('slideshow').getElementsByTagName('button')
 let i = 0
+let time = 2000
 function imageChanger(){
     if (i == 0){
         images[i].style.display = 'inline-block'
@@ -20,6 +21,28 @@ function imageChanger(){
     console.log(i)
     i++
 }
+function next(){
+    
+    setTimeout(imageChanger)
+
+}
+function previous(){
+    clearInterval(looper);
+    if (i==0){
+        images[i].style.display = 'none'
+        images[images.length-1].style.display = 'inline-block'
+    }
+    else if (i== images.length-1){
+        images[i].style.display = 'none'
+        images[i-1].style.display = 'inline-block'
+    }
+    else{
+        images[i].style.display = 'none'
+        images[i-1].style.display = 'inline-block'
+    }
+
+    i--;
+}
 function stopLooper(){
     if (button[1].innerHTML == 'ON'){
         clearInterval(looper);
@@ -32,7 +55,4 @@ function stopLooper(){
     
     
 }
-let looper = setInterval(imageChanger,2000);
-
-
-
+let looper = setInterval(imageChanger,time);
