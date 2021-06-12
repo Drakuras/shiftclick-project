@@ -22,25 +22,29 @@ function imageChanger(){
     i++
 }
 function next(){
+    console.log(time)
     
     setTimeout(imageChanger)
 
 }
 function previous(){
-    clearInterval(looper);
-    if (i==0){
-        images[i].style.display = 'none'
+    clearInterval(looper)
+    if (i ==-1){
+        i = images.length-1
+        images[0].style.display = 'none'
+        images[i].style.display = 'inline-block'
+       }
+    else if (i < images.length-1){
+        images[i+1].style.display = 'none'
+        images[i].style.display = 'inline-block'
+        
+    }
+    else if (i == 0){
+        images[0].style.display = 'none'
         images[images.length-1].style.display = 'inline-block'
-    }
-    else if (i== images.length-1){
-        images[i].style.display = 'none'
-        images[i-1].style.display = 'inline-block'
-    }
-    else{
-        images[i].style.display = 'none'
-        images[i-1].style.display = 'inline-block'
-    }
 
+    }
+    console.log(i)
     i--;
 }
 function stopLooper(){
