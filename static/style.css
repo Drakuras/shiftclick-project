@@ -8,11 +8,12 @@ body{
 }
 
 .container1{
-    
     margin: 20px;
     text-align: center;
-    
-    
+}
+.container1 a{
+    text-decoration: none;
+    color: paleturquoise;
 }
 h1{
     color: rgb(0, 255, 213);
@@ -43,7 +44,7 @@ h1{
     padding: 30px;
     border-top: none;
     margin: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     margin-top: -105px;
     
    
