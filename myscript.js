@@ -1,21 +1,16 @@
 const images = document.getElementById('slideshow').getElementsByTagName('img')
 const button = document.getElementById('slideshow').getElementsByTagName('button')
 let i = 0
-let time = 2000
-//on and off function for the carousel/slideshow
-function stopLooper(){
-    if (button[1].innerHTML == 'ON'){
-        clearInterval(loop);
-        button[1].innerHTML = 'OFF'
-    }
-    else{
-        loop = setInterval('next()', time);
-        button[1].innerHTML = 'ON'
-    } 
-}
-//next button funtion
-function next(){
-    
+let next = document.getElementById('next')
+let previous = document.getElementById('previous')
+next.addEventListener("click",nextFunc)
+previous.addEventListener("click",previousFunc)
+
+
+images[0].style.display = 'inline-block'
+function nextFunc(){
+    i++ 
+
     if (i > images.length-1){
         i = 0
         images[images.length-1].style.display = 'none'
@@ -30,32 +25,31 @@ function next(){
             images[i].style.display = 'inline-block'
         }
     }
-    console.log(i)
     clearInterval(loop)
-    loop = setInterval('next()', time);
-    i++  
+    loop = setInterval('nextFunc()', 2000);
+     
 }
-function previous(){
-    clearInterval(loop);
-    if (i == -1){
-        i = images.length-1
+function previousFunc(){
+    if (i == 0){
+        i = images.length
         images[0].style.display = 'none'
         images[images.length-1].style.display = 'inline-block'
-        
+        i--;
+        console.log(i)
+    }
+    else if (i == images.length-1){
+        images[images.length-1].style.display = 'none'
+        images[i-1].style.display = 'inline-block'
+        i--
     }
     else{
-        if (i == images.length-1){
-            images[0].style.display = 'none'
-            images[i-1].style.display = 'inline-block'
-        }
-        else{
-            images[i].style.display = 'none'
-            images[i-1].style.display = 'inline-block'
-        }
+        images[i].style.display = 'none'
+        images[images.length-1].style.display = 'none'
+        images[i-1].style.display = 'inline-block'
+        clearInterval(loop)
+        loop = setInterval('previousFunc()', 2000);
+        i--
     }
-    console.log(i)
-    i--;
 }
 
-images[0].style.display = 'inline-block'
-let loop = setInterval('next()', time);
+let loop = setInterval(nextFunc, 2000);

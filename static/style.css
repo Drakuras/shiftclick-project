@@ -31,7 +31,7 @@ h1{
 #slideshow img{
     box-shadow: 0px 21px 30px -14px rgba(0,0,0,0.89);
     border-radius: 3px;
-    width: 95%;
+    width: 65%;
     height: 80%;
     object-fit: cover;
     display: none;
@@ -39,18 +39,12 @@ h1{
 #carousel-btn{
     display: flex;
     height: 50px;
-    justify-content: space-evenly;
-    padding: 40px;
-    border: solid;
-    border-color: rgb(150, 215, 231);
-    border-radius: 5%;
-    border-width: 6px;
-    border-left: 10px;
-    border-right: 10px;
+    justify-content: space-around;
+    padding: 30px;
     border-top: none;
     margin: 10px;
-    margin-bottom: 50px;
-    margin-top: -125px;
+    margin-bottom: 10px;
+    margin-top: -105px;
     
    
     
@@ -147,8 +141,9 @@ h1{
     }
     #slideshow img{
         height: 50%;
+        width: 100%;
     }
     #carousel-btn button{
-        display: none;  
+        /* display: none;   */
     } 
 }
