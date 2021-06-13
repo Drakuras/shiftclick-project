@@ -23,7 +23,7 @@ h1{
  
 }
 #slideshow{
-    
+    position: relative;
     width: 100%;
     text-align: center;
     
@@ -31,7 +31,6 @@ h1{
 #slideshow img{
     box-shadow: 0px 21px 30px -14px rgba(0,0,0,0.89);
     border-radius: 3px;
-   
     width: 95%;
     height: 80%;
     object-fit: cover;
@@ -39,7 +38,7 @@ h1{
 }
 #carousel-btn{
     display: flex;
-    height: 100px;
+    height: 50px;
     justify-content: space-evenly;
     padding: 40px;
     border: solid;
@@ -51,7 +50,7 @@ h1{
     border-top: none;
     margin: 10px;
     margin-bottom: 50px;
-    margin-top: 1px;
+    margin-top: -125px;
     
    
     
@@ -65,9 +64,10 @@ h1{
     color: rgb(2, 226, 255);
     padding: 10px;
     width: 100px;
-    height: 100px;
-    border: none;
+    height: 50px;
     border-radius: 100%;
+
+
     background-color: transparent;
     font-size: x-large;
    
@@ -135,4 +135,20 @@ h1{
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #1d1d1d; 
+}
+
+@media (max-width: 800px) {
+    .container1, p {
+        margin: 5px;
+        font-size: small;
+    }
+    #links a img{
+        width: 50px;
+    }
+    #slideshow img{
+        height: 50%;
+    }
+    #carousel-btn button{
+        display: none;  
+    } 
 }
